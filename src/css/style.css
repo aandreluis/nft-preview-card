@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  /* Primary */
+  --text-soft-blue: #8bacda;
+  --text-cyan: #00fff7;
+
+  /* Secondary */
+  --bg-blue-main: #0d192b;
+  --bg-card-blue-card: #14253d;
+  --border-blue-line: #2f415b;
+  --white: #ffffff;
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--bg-blue-main);
+  color: var(--white);
+  margin: 0;
+}
+
+body p {
+  font-size: 18px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#card {
+  width: 320px;
+  padding: 24px;
+  margin: 0;
+  background-color: var(--bg-card-blue-card);
+  border: none;
+  border-radius: 16px;
+}
+
+#card .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#card .image img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+#card .image span {
+  max-width: 100%;
+  max-height: 100%;
+  width: 320px;
+  height: 320px;
+  border-radius: 16px;
+  background-color: rgba(0, 255, 247, 0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+#card .image:hover span {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+#card .text h2:hover {
+  color: var(--text-cyan);
+  transition: 0.3s;
+}
+
+#card .text p {
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: var(--text-soft-blue);
+}
+
+#card .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#card .details span {
+  display: flex;
+  align-items: center;
+}
+
+#card .details span p {
+  margin-left: 8px;
+  font-weight: 300;
+  color: var(--text-soft-blue);
+}
+
+#card .details span:first-child p {
+  font-weight: 600;
+  color: var(--text-cyan);
+}
+
+#card .creation {
+  display: flex;
+  align-items: center;
+  padding-top: 6px;
+  margin-top: 6px;
+  border-top: solid 1px var(--border-blue-line);
+}
+
+#card .creation img {
+  width: 32px;
+  margin-right: 16px;
+  border: solid 2px var(--white);
+  border-radius: 50%;
+}
+
+#card .creation p {
+  font-weight: 300;
+  color: var(--text-soft-blue);
+}
+
+#card .creation a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+#card .creation a:hover {
+  color: var(--text-cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 8px;
+  color: var(--text-soft-blue);
+}
+
+.attribution a {
+  color: var(--white);
+}
+
+/* Mobile */
+@media (max-width: 375px) {
+  #card {
+    width: 80%;
+  }
+}
